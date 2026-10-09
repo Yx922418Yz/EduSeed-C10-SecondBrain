@@ -2,9 +2,9 @@
 name: blog-writer
 description: 写对外可见的中文文案/公众号/小红书，先去 AI 味再交
 triggers: [写文章, 公众号, 小红书, 文案, 配文, 视频文案, 博客, blog, 写作, 朋友圈, 回复评论]
-usage_count: 5
-last_effect: "2026-10-09 run #5: 补触发词后本次正确命中 blog-writer"
-avg_delta_r: -0.019
+usage_count: 6
+last_effect: "2026-10-09 run #6: 组织者独立核验运行：验证 blog-writer 命中"
+avg_delta_r: 0.002
 status: active
 iteration_log:
   - date: 2026-04-18
@@ -13,6 +13,8 @@ iteration_log:
     note: "2026-10-09 实战漏召：情境里说'配文'没命中，补 triggers 加 配文/视频文案"
   - date: 2026-10-09
     note: "补触发词后本次正确命中 blog-writer"
+  - date: 2026-10-09
+    note: "组织者独立核验运行：验证 blog-writer 命中"
 ---
 
 # Skill: blog-writer
