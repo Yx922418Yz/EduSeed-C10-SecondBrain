@@ -1,0 +1,36 @@
+================================================================
+KSTAR LOOP 启动 @ 2026-10-09T18:03:28
+================================================================
+
+[K] 检索记忆库中可用技能 ...
+    score= 2.50  debug-workflow     usage= 5  当代码/脚本报错时，按 SOP 定位根因而不是瞎改
+    score= 0.50  aar-generator      usage= 5  事后复盘：把一段经历按 S→T→Â→R̂→A→R→ΔR 写成结构化 AAR
+    score= 0.50  weekly-planning    usage= 6  每周日晚花 15 分钟，把本周目标 + 上周遗留 + 身体约束排成日历块
+    >> 选中技能: debug-workflow
+
+[S] 情境: pip install django-celery-beat 报 dependency conflict
+[T] 任务: 调用 debug-workflow 处理该情境
+
+[Â] 行动计划（来自 skills/debug-workflow.md 的 Steps）:
+    0. **先确认外部依赖活着**：`netstat -ano | findstr :<端口>`；服务类（Ollama/MySQL/Redis）先看托盘/任务管理器。
+    1. **读报错最后一行**：那是真正的异常类型。往上翻第一个属于"我自己写的文件"的栈帧，那才是出事地点。
+    2. **搜错误码/异常类名**：`pip show <被点名的包>`；Windows 中文文件检查 `encoding="utf-8"`；网络问题先换条路（ep005 的教训）。
+    3. **只改一个变量**：每次只动一处，改完立刻复跑。不要同时改三处然后问"哪处生效了"。
+    4. **修好之后写一条 L2 episode**：记 S→T→Â→R̂→A→R→ΔR，别让同样的坑踩第二次。
+
+[R̂] 预期评分（用户给定）= 0.7
+
+[A] 执行中 ...
+    ✔ 0. **先确认外部依赖活着**：`netstat -ano | findstr :<端口>`；服务类（Ollama/MySQL/Redis）先看托盘/任务管理器。
+    ✔ 1. **读报错最后一行**：那是真正的异常类型。往上翻第一个属于"我自己写的文件"的栈帧，那才是出事地点。
+    ✔ 2. **搜错误码/异常类名**：`pip show <被点名的包>`；Windows 中文文件检查 `encoding="utf-8"`；网络问题先换条路（ep005 的教训）。
+    ✔ 3. **只改一个变量**：每次只动一处，改完立刻复跑。不要同时改三处然后问"哪处生效了"。
+    ✔ 4. **修好之后写一条 L2 episode**：记 S→T→Â→R̂→A→R→ΔR，别让同样的坑踩第二次。
+
+[R] 实际评分（用户事后填）= 0.55
+[ΔR] R̂−R = 0.15  ->  预测偏保守，技能可以更激进
+
+[写回] 新 episode -> memory\L2_episodes\ep007_pip_install_django_celer.md
+[写回] 技能 debug-workflow usage_count 已 +1，avg_delta_r 已更新，iteration_log 已追加
+================================================================
+KSTAR 闭环完成。
